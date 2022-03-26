@@ -10,7 +10,7 @@ h1 {
 h3 {
   text-align: center;
   font-family: Tahoma, Helvetica, sans-serif;
-  color: white;
+  color: #bd3939;
   width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -28,25 +28,25 @@ p {
 a:link {
   text-decoration: none;
   font-family: Tahoma, Helvetica, sans-serif;
-  color: white;
+  color: tomato;
 }
 
 a:visited {
   text-decoration: none;
   font-family: Tahoma, Helvetica, sans-serif;
-  color: white;
+  color: tomato;
 }
 
 a:hover {
   text-decoration: underline;
   font-family: Tahoma, Helvetica, sans-serif;
-  color: white;
+  color: tomato;
 }
 
 a:active {
   text-decoration: none;
   font-family: Tahoma, Helvetica, sans-serif;
-  color: white;
+  color: tomato;
 }
 
 body {
