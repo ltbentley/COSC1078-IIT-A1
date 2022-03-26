@@ -1,0 +1,54 @@
+h1 {
+  text-align: center;
+  font-family: Tahoma, Helvetica, sans-serif;
+  color: white;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  text-align: center;
+  font-family: Tahoma, Helvetica, sans-serif;
+  color: white;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  text-align: center;
+  font-family: Tahoma, Helvetica, sans-serif;
+  color: white;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:link {
+  text-decoration: none;
+  font-family: Tahoma, Helvetica, sans-serif;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  font-family: Tahoma, Helvetica, sans-serif;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-family: Tahoma, Helvetica, sans-serif;
+  color: white;
+}
+
+a:active {
+  text-decoration: none;
+  font-family: Tahoma, Helvetica, sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #363233;
+}
