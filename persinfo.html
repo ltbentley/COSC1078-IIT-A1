@@ -13,63 +13,102 @@
   </head>
 
   <style>
-body {margin:0;}
+body {
+margin: 0;
+font-size: 28px;
+font-family: Tahoma, Helvetica, sans-serif;
+}
 
-.icon-bar {
-width: 100%;
+.header {
+background-color: #f1f1f1;
+padding: 30px;
+text-align: center;
+}
+
+#navbar {
+overflow: hidden;
 background-color: #555;
-overflow: auto;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.icon-bar a {
+#navbar a {
 float: left;
-width: 20%;
+display: block;
+color: #f2f2f2;
 text-align: center;
-padding: 12px 0;
-transition: all 0.3s ease;
-color: white;
-font-family: Tahoma, Helvetica, sans-serif;
-font-size: 20px;
+padding: 14px 16px;
 text-decoration: none;
+font-size: 17px;
 }
 
-.icon-bar a:hover {
+#navbar a:hover {
 background-color: #6e0303;
+color: white;
 }
 
-.active {
+#navbar a.active {
 background-color: #aa0404;
+color: white;
+}
+
+.content {
+padding: 16px;
+}
+
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.sticky + .content {
+padding-top: 60px;
 }
 </style>
 <body>
 
-<div class="icon-bar">
-<a href="index.html">Home</a>
-<a class="active" "persinfo.html">Personal Information <i class="fa fa-user"></i></a>
-<a href="it.html">Interest in IT</a>
-<a href="job.html">Ideal Job</a>
-<a href="project.html">Project</a>
+<div class="header">
+<h1 style="color: tomato;">About Me</h1>
+<p style="color: black;">Course: COSC1078 <br> Name: Liam Thomas Bentley <br> Student ID: s3928558</p>
 </div>
+
+<div id="navbar">
+<a href="index.html">Home <i class="fa fa-house"></i></a>
+<a class="active" href="persinfo.html">About Me <i class="fa fa-user"></i></a>
+<a href="it.html">Interest in IT <i class="fa fa-desktop"></i></a>
+<a href="job.html">Ideal Job <i class="fa fa-briefcase"></i></a>
+<a href="project.html">Project <i class="fa-solid fa-lightbulb"></i></a>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 
   <body>
 
-    <h1>Personal Information</h1>
-
-    <p>Born in Shepparton, raised in Bendigo, I moved from Bendigo to Melbourne to study a Bachelor of Information
-  Technology at RMIT as a mature age student. I previously studied a Bachelor of Commerce at Deakin University,
-  with a particular focus on contractual law, though I did not proceed with my second year of the course due to a
-  change in career direction. In my personal time I play in amateur esports tournaments with friends for competitive
-  first-person shooter games, such as Rainbow Six Siege and Counter Strike: Global Offensive. If I am not spending
-  time with friends, working, studying, or gaming, then I am usually at the gym or walking my golden retriever, Henry.</p>
-
-  <h1>Personal Profile</h1>
-
   <h3>16 Personsalities Test Results</h3>
+
+  <img src="images/16personalities.png" alt="16 Personalities 1" style="width:1000px;height:600px;">
+  <img src="images/16personalities2.png" alt="16 Personalities 2" style="width:500px;height:600px;">
 
   <h3>Learning Style Test Results</h3>
 
+  <img src="images/" alt="Learning Styles" style="width:500px;height:600px;">
+
   <h3>Big Five Personality Test Results</h3>
+
+  <img src="images/" alt="Big Five" style="width:500px;height:600px;">
 
   <h3>What do the results of these tests mean for you?</h3>
 

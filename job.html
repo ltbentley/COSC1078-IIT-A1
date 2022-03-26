@@ -13,45 +13,87 @@
   </head>
   <body>
     <style>
-body {margin:0;}
-
-.icon-bar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.icon-bar a {
-  float: left;
-  width: 20%;
-  text-align: center;
-  padding: 12px 0;
-  transition: all 0.3s ease;
-  color: white;
+  body {
+  margin: 0;
+  font-size: 28px;
   font-family: Tahoma, Helvetica, sans-serif;
-  font-size: 20px;
+  }
+
+  .header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  }
+
+  #navbar {
+  overflow: hidden;
+  background-color: #555;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-}
+  font-size: 17px;
+  }
 
-.icon-bar a:hover {
+  #navbar a:hover {
   background-color: #6e0303;
-}
+  color: white;
+  }
 
-.active {
+  #navbar a.active {
   background-color: #aa0404;
-}
-</style>
-<body>
+  color: white;
+  }
 
-<div class="icon-bar">
-  <a href="index.html">Home</a>
-  <a href="persinfo.html">Personal Info</a>
-  <a href="it.html">Interest in IT</a>
-  <a class="active" "job.html">Ideal Job <i class="fa fa-briefcase"></i></a>
-  <a href="project.html">Project</a>
-</div>
-<h1>Ideal Job</h1>
+  .content {
+  padding: 16px;
+  }
+
+  .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  }
+
+  .sticky + .content {
+  padding-top: 60px;
+  }
+  </style>
+  <body>
+
+  <div class="header">
+  <h1 style="color: tomato;">Ideal Job</h1>
+  <p style="color: black;">Course: COSC1078 <br> Name: Liam Thomas Bentley <br> Student ID: s3928558</p>
+  </div>
+
+  <div id="navbar">
+  <a href="index.html">Home <i class="fa fa-house"></i></a>
+  <a href="persinfo.html">About Me <i class="fa fa-user"></i></a>
+  <a href="it.html">Interest in IT <i class="fa fa-desktop"></i></a>
+  <a class="active" href="job.html">Ideal Job <i class="fa fa-briefcase"></i></a>
+  <a href="project.html">Project <i class="fa-solid fa-lightbulb"></i></a>
+  </div>
+
+  <script>
+  window.onscroll = function() {myFunction()};
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
 
 <div style="text-align: center;">
   <a href="https://www.seek.com.au/job/56344934?type=standout#sol=d03c337e104d3d81898d31e31e197a140ea0981"target=”_blank”>Database Consultants Australia – Software Developer Position</a><br>
@@ -112,6 +154,9 @@ am given the industry to network and establish connections for future opportunit
 plans for my study, I intend to become fluent in all of the essential programming languages over the course of
 completing my degree as they are absolutely necessary for my desired career path.
 </p>
+
+<img src="images/job1.png" alt="Job Listing Part 1" style="width:500px;height:600px;">
+<img src="images/job2.png" alt="Job Listing Part 2" style="width:500px;height:600px;">
 
   </body>
 </html>

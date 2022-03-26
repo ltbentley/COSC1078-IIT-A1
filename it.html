@@ -14,48 +14,88 @@
 
 <body>
   <style>
+body {
+margin: 0;
+font-size: 28px;
+font-family: Tahoma, Helvetica, sans-serif;
+}
 
-body {margin:0;}
+.header {
+background-color: #f1f1f1;
+padding: 30px;
+text-align: center;
+}
 
-.icon-bar {
-width: 100%;
+#navbar {
+overflow: hidden;
 background-color: #555;
-overflow: auto;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.icon-bar a {
+#navbar a {
 float: left;
-width: 20%;
+display: block;
+color: #f2f2f2;
 text-align: center;
-padding: 12px 0;
-transition: all 0.3s ease;
-color: white;
-font-family: Tahoma, Helvetica, sans-serif;
-font-size: 20px;
+padding: 14px 16px;
 text-decoration: none;
+font-size: 17px;
 }
 
-.icon-bar a:hover {
+#navbar a:hover {
 background-color: #6e0303;
+color: white;
 }
 
-.active {
+#navbar a.active {
 background-color: #aa0404;
+color: white;
+}
+
+.content {
+padding: 16px;
+}
+
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.sticky + .content {
+padding-top: 60px;
 }
 </style>
 <body>
 
-<div class="icon-bar">
-<a href="index.html">Home</a>
-<a href="persinfo.html">Personal Info</a>
-<a class="active" "it.html">Interest in IT <i class="fa fa-desktop"></i></a>
-<a href="job.html">Ideal Job</a>
-<a href="project.html">Project</a>
+<div class="header">
+<h1 style="color: tomato;">Interest in IT</h1>
+<p style="color: black;">Course: COSC1078 <br> Name: Liam Thomas Bentley <br> Student ID: s3928558</p>
 </div>
 
+<div id="navbar">
+<a href="index.html">Home <i class="fa fa-house"></i></a>
+<a href="persinfo.html">About Me <i class="fa fa-user"></i></a>
+<a class="active" href="it.html">Interest in IT <i class="fa fa-desktop"></i></a>
+<a href="job.html">Ideal Job <i class="fa fa-briefcase"></i></a>
+<a href="project.html">Project <i class="fa-solid fa-lightbulb"></i></a>
+</div>
 
-    <h1>Interest in IT</h1>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
     <h3>What is your interest in IT?</h3>
     <p>My personal interest in studying Information Technology stems from a desire to pursue a career in either cyber
 security or software development. I enjoy the aspects of problem solving that come with coding as well as the
